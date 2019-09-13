@@ -113,7 +113,7 @@ fi
 
 echo "Calculating optimal AUC threshold: $(date)"
 
-path=$(cd `dirname $0` && pwd)
+path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$(basename "${BASH_SOURCE[0]}")"
 if [[ -f $2 ]] && [[ $norm == "norm" ]]
 then
 	echo "Calculating threshold using normalized control: $(date)"
